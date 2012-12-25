@@ -10,20 +10,18 @@ XML::GrammarBase::Role::RelaxNG - base class for a RelaxNG validator
 
 =head1 VERSION
 
-Version 0.0.1
+Version 0.0.2
 
 =cut
 
-use Moo::Role;
-
-use MooX 'late';
+use MooX::Role 'late';
 
 use File::ShareDir qw(dist_dir);
 use XML::LibXML;
 
 with ('XML::GrammarBase::Role::DataDir');
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 has 'rng_schema_basename' => (isa => 'Str', is => 'rw');
 has '_rng' =>

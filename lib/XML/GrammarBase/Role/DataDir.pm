@@ -10,17 +10,15 @@ XML::GrammarBase::Role::DataDir - provide the data_dir accessor.
 
 =head1 VERSION
 
-Version 0.0.1
+Version 0.0.2
 
 =cut
 
-use Moo::Role;
-
-use MooX 'late';
+use MooX::Role 'late';
 
 use File::ShareDir qw(dist_dir);
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 has 'module_base' => (isa => 'Str', is => 'rw');
 has 'data_dir' => (isa => 'Str', is => 'rw',
