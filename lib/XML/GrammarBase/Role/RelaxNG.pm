@@ -10,7 +10,7 @@ XML::GrammarBase::Role::RelaxNG - base class for a RelaxNG validator
 
 =head1 VERSION
 
-Version 0.0.2
+Version 0.0.3
 
 =cut
 
@@ -21,7 +21,7 @@ use XML::LibXML;
 
 with ('XML::GrammarBase::Role::DataDir');
 
-our $VERSION = '0.0.2';
+our $VERSION = '0.0.3';
 
 has 'rng_schema_basename' => (isa => 'Str', is => 'rw');
 has '_rng' =>
@@ -98,7 +98,7 @@ sub rng_validate_string
 
     package XML::Grammar::MyGrammar::RelaxNG::Validate;
 
-    use Any::Moose;
+    use MooX 'late';
 
     with ('XML::GrammarBase::Role::RelaxNG');
 

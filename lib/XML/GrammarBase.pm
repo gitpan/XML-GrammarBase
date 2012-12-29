@@ -10,11 +10,11 @@ specialized XML grammars.
 
 =head1 VERSION
 
-Version 0.0.2
+Version 0.0.3
 
 =cut
 
-our $VERSION = '0.0.2';
+our $VERSION = '0.0.3';
 
 
 =head1 SYNOPSIS
@@ -31,7 +31,7 @@ It provides roles and base classes for facilitating writing those.
 
 =head1 SEE ALSO
 
-L<XML::GrammarBase::Role::RelaxNG> .
+L<XML::GrammarBase::Role::RelaxNG> , L<XML::GrammarBase::Role::XSLT> .
 
 =head1 FUNCTIONS
 
