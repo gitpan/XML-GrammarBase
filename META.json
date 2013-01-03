@@ -46,19 +46,19 @@
    "provides" : {
       "XML::GrammarBase" : {
          "file" : "lib/XML/GrammarBase.pm",
-         "version" : "v0.0.3"
+         "version" : "v0.1.0"
       },
       "XML::GrammarBase::Role::RelaxNG" : {
          "file" : "lib/XML/GrammarBase/Role/RelaxNG.pm",
-         "version" : "v0.0.3"
+         "version" : "v0.1.0"
       },
       "XML::GrammarBase::Role::XSLT" : {
          "file" : "lib/XML/GrammarBase/Role/XSLT.pm",
-         "version" : "v0.0.2"
+         "version" : "v0.1.0"
       },
       "XML::GrammarBase::Role::XSLT::Global" : {
          "file" : "lib/XML/GrammarBase/Role/XSLT/Global.pm",
-         "version" : "v0.0.3"
+         "version" : "v0.1.0"
       }
    },
    "release_status" : "stable",
@@ -67,5 +67,5 @@
          "http://www.opensource.org/licenses/mit-license.php"
       ]
    },
-   "version" : "v0.0.3"
+   "version" : "v0.1.0"
 }

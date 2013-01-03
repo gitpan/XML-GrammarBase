@@ -6,11 +6,11 @@ use warnings;
 
 =head1 NAME
 
-XML::GrammarBase::Role::XSLT - a parameterized role for a XSLT conversions.
+XML::GrammarBase::Role::XSLT - a parameterized role for XSLT conversions.
 
 =head1 VERSION
 
-Version 0.0.2
+Version 0.1.0
 
 =cut
 
@@ -25,7 +25,7 @@ use XML::LibXSLT;
 
 use autodie;
 
-our $VERSION = '0.0.2';
+our $VERSION = '0.1.0';
 
 
 sub make_variant
@@ -155,6 +155,10 @@ The C<'output'> key specifies the return value. A value of C<'string'> returns
 the XML as a string, and a value of C<'dom'> returns the XML as an
 L<XML::LibXML> DOM object. If it is a hash ref then it specifies a
 C<'file'> or a C<'fh'> with a filepath or filehandle respectively.
+
+An optional C<'encoding'> parameter determines if one should output the string
+as C<'utf8'> (the deafult - using L<XML::LibXSLT>'s
+output_as_chars()) or as C<'bytes'> - using its output_as_bytes() .
 
 =cut
 

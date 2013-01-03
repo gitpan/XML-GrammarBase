@@ -6,11 +6,11 @@ use warnings;
 
 =head1 NAME
 
-XML::GrammarBase::Role::XSLT - a parameterized role for an XSLT converter.
+XML::GrammarBase::Role::XSLT::Global - a base, non-parameterised, role for an XSLT converter.
 
 =head1 VERSION
 
-Version 0.0.3
+Version 0.1.0
 
 =cut
 
@@ -21,7 +21,7 @@ use XML::LibXSLT;
 
 use autodie;
 
-our $VERSION = '0.0.3';
+our $VERSION = '0.1.0';
 
 with ('XML::GrammarBase::Role::RelaxNG');
 
@@ -98,6 +98,8 @@ sub perform_xslt_translation
     my ($self, $args) = @_;
 
     my $output_format = $args->{output_format};
+    my $encoding = ($args->{encoding} || 'utf8');
+
     my $source_dom = $self->_get_dom_from_source($args);
 
     my $stylesheet_method = "_to_${output_format}_stylesheet";
@@ -116,7 +118,9 @@ sub perform_xslt_translation
         return
             $is_dom
             ? $results
-            : $stylesheet->output_string($results)
+            : ($encoding eq 'bytes')
+            ? $stylesheet->output_as_bytes($results)
+            : $stylesheet->output_as_chars($results)
             ;
     }
     elsif (ref($medium) eq 'HASH')
