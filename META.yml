@@ -10,6 +10,18 @@ configure_requires:
   Module::Build: 0.36
 dynamic_config: 1
 generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+keywords:
+  - abstraction
+  - base
+  - grammar
+  - moo
+  - moose
+  - relaxng
+  - rng
+  - role
+  - roles
+  - xml
+  - xslt
 license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,16 +30,16 @@ name: XML-GrammarBase
 provides:
   XML::GrammarBase:
     file: lib/XML/GrammarBase.pm
-    version: v0.1.0
+    version: v0.1.1
   XML::GrammarBase::Role::RelaxNG:
     file: lib/XML/GrammarBase/Role/RelaxNG.pm
-    version: v0.1.0
+    version: v0.1.1
   XML::GrammarBase::Role::XSLT:
     file: lib/XML/GrammarBase/Role/XSLT.pm
-    version: v0.1.0
+    version: v0.1.1
   XML::GrammarBase::Role::XSLT::Global:
     file: lib/XML/GrammarBase/Role/XSLT/Global.pm
-    version: v0.1.0
+    version: v0.1.1
 requires:
   File::ShareDir: 0
   Moo::Role: 0
@@ -42,5 +54,7 @@ requires:
   strict: 0
   warnings: 0
 resources:
+  homepage: http://www.shlomifish.org/open-source/projects/XML-Grammar/Base/
   license: http://www.opensource.org/licenses/mit-license.php
-version: v0.1.0
+  repository: http://bitbucket.org/shlomif/perl-xml-grammarbase
+version: v0.1.1
