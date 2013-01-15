@@ -1,4 +1,4 @@
-package XML::GrammarBase::Role::RelaxNG;
+package XML::GrammarBase::Role::DataDir;
 
 use strict;
 use warnings;
@@ -10,7 +10,7 @@ XML::GrammarBase::Role::DataDir - provide the data_dir accessor.
 
 =head1 VERSION
 
-Version 0.1.2
+Version 0.1.3
 
 =cut
 
@@ -18,9 +18,23 @@ use MooX::Role 'late';
 
 use File::ShareDir qw(dist_dir);
 
-our $VERSION = '0.1.2';
+our $VERSION = '0.1.3';
 
-has 'module_base' => (isa => 'Str', is => 'rw');
+my $_component_re = qr/[A-Za-z_]\w*/;
+
+has 'module_base' => (isa => sub {
+        my ($dist_name) = @_;
+        if (not (
+                (ref($dist_name) eq '')
+                &&
+                ($dist_name =~ m/\A$_component_re(?:-$_component_re)*\z/)
+            )
+        )
+        {
+            die "module_base must be a distribution string of components separated by dashes";
+        }
+    },
+    , is => 'rw');
 has 'data_dir' => (isa => 'Str', is => 'rw',
     default => sub { return shift->_calc_default_data_dir(); },
     lazy => 1,
@@ -63,7 +77,7 @@ sub dist_path_slot
 
     with ('XML::GrammarBase::Role::DataDir');
 
-    has '+module_base' => (default => 'XML::Grammar::MyGrammar');
+    has '+module_base' => (default => 'XML-Grammar-MyGrammar');
 
     package main;
 
@@ -75,7 +89,7 @@ sub dist_path_slot
 
 =head2 module_base
 
-The basename of the module - used for dist dir.
+The basename of the distribution - used for dist dir.
 
 =head2 data_dir
 
