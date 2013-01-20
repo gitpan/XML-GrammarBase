@@ -10,7 +10,7 @@ XML::GrammarBase::Role::XSLT - a parameterized role for XSLT conversions.
 
 =head1 VERSION
 
-Version 0.1.5
+Version 0.2.0
 
 =cut
 
@@ -25,7 +25,7 @@ use XML::LibXSLT;
 
 use autodie;
 
-our $VERSION = '0.1.5';
+our $VERSION = '0.2.0';
 
 
 sub make_variant
@@ -159,6 +159,9 @@ C<'file'> or a C<'fh'> with a filepath or filehandle respectively.
 An optional C<'encoding'> parameter determines if one should output the string
 as C<'utf8'> (the deafult - using L<XML::LibXSLT>'s
 output_as_chars()) or as C<'bytes'> - using its output_as_bytes() .
+
+An optional 'xslt_params' parmater allows one to specify a hash of XSLT
+parameters.
 
 =cut
 
