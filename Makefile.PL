@@ -16,7 +16,7 @@ WriteMakefile
                    'Test::More' => 0,
                    'Test::XML::Ordered' => 0,
                    'XML::LibXML' => '2.0013',
-                   'XML::LibXSLT' => 0,
+                   'XML::LibXSLT' => '1.80',
                    'autodie' => 0,
                    'strict' => 0,
                    'warnings' => 0
