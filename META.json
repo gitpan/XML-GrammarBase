@@ -4,7 +4,7 @@
       "Shlomi Fish <shlomif@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.3901, CPAN::Meta::Converter version 2.120921",
    "keywords" : [
       "abstraction",
       "base",
@@ -48,7 +48,7 @@
             "MooX::Types::MooseLike" : "0",
             "MooX::late" : "0",
             "Package::Variant" : "0",
-            "XML::LibXML" : "2.0013",
+            "XML::LibXML" : "2.0017",
             "XML::LibXSLT" : "1.80",
             "autodie" : "0",
             "strict" : "0",
@@ -59,23 +59,23 @@
    "provides" : {
       "XML::GrammarBase" : {
          "file" : "lib/XML/GrammarBase.pm",
-         "version" : "v0.2.1"
+         "version" : "v0.2.2"
       },
       "XML::GrammarBase::Role::DataDir" : {
          "file" : "lib/XML/GrammarBase/Role/DataDir.pm",
-         "version" : "v0.2.1"
+         "version" : "v0.2.2"
       },
       "XML::GrammarBase::Role::RelaxNG" : {
          "file" : "lib/XML/GrammarBase/Role/RelaxNG.pm",
-         "version" : "v0.2.1"
+         "version" : "v0.2.2"
       },
       "XML::GrammarBase::Role::XSLT" : {
          "file" : "lib/XML/GrammarBase/Role/XSLT.pm",
-         "version" : "v0.2.1"
+         "version" : "v0.2.2"
       },
       "XML::GrammarBase::Role::XSLT::Global" : {
          "file" : "lib/XML/GrammarBase/Role/XSLT/Global.pm",
-         "version" : "v0.2.1"
+         "version" : "v0.2.2"
       }
    },
    "release_status" : "stable",
@@ -88,5 +88,5 @@
          "url" : "http://bitbucket.org/shlomif/perl-xml-grammarbase"
       }
    },
-   "version" : "v0.2.1"
+   "version" : "v0.2.2"
 }

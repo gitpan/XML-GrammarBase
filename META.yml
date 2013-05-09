@@ -9,7 +9,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.36
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Module::Build version 0.3901, CPAN::Meta::Converter version 2.120921'
 keywords:
   - abstraction
   - base
@@ -30,19 +30,19 @@ name: XML-GrammarBase
 provides:
   XML::GrammarBase:
     file: lib/XML/GrammarBase.pm
-    version: v0.2.1
+    version: v0.2.2
   XML::GrammarBase::Role::DataDir:
     file: lib/XML/GrammarBase/Role/DataDir.pm
-    version: v0.2.1
+    version: v0.2.2
   XML::GrammarBase::Role::RelaxNG:
     file: lib/XML/GrammarBase/Role/RelaxNG.pm
-    version: v0.2.1
+    version: v0.2.2
   XML::GrammarBase::Role::XSLT:
     file: lib/XML/GrammarBase/Role/XSLT.pm
-    version: v0.2.1
+    version: v0.2.2
   XML::GrammarBase::Role::XSLT::Global:
     file: lib/XML/GrammarBase/Role/XSLT/Global.pm
-    version: v0.2.1
+    version: v0.2.2
 requires:
   File::ShareDir: 0
   Moo::Role: 0
@@ -51,7 +51,7 @@ requires:
   MooX::Types::MooseLike: 0
   MooX::late: 0
   Package::Variant: 0
-  XML::LibXML: 2.0013
+  XML::LibXML: 2.0017
   XML::LibXSLT: 1.80
   autodie: 0
   strict: 0
@@ -60,4 +60,4 @@ resources:
   homepage: http://www.shlomifish.org/open-source/projects/XML-Grammar/Base/
   license: http://www.opensource.org/licenses/mit-license.php
   repository: http://bitbucket.org/shlomif/perl-xml-grammarbase
-version: v0.2.1
+version: v0.2.2
